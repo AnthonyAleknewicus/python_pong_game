@@ -23,10 +23,12 @@ screen.onkeypress(l_paddle.go_down, "s")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(0.08)
     screen.update()
     ball.move()
 
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
 
 
 
